@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha OMR A5 - {{ theme.title }}</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 24px; background: #e2e8f0; color: #0f172a; font-family: Arial, sans-serif; }
+        main { display: flex; justify-content: center; align-items: flex-start; gap: 24px; max-width: 1000px; margin: auto; }
+        .controls { width: 240px; flex-shrink: 0; }
+        h1 { margin: 0 0 6px; font-size: 20px; }
+        .subtitle { margin: 0 0 20px; color: #475569; font-size: 13px; }
+        .themes { display: flex; gap: 8px; margin-bottom: 16px; }
+        a { color: #0f172a; }
+        .themes a { flex: 1; padding: 10px 6px; text-align: center; border: 1px solid #94a3b8; border-radius: 6px; font-size: 12px; text-decoration: none; background: white; }
+        .themes a[aria-current="page"] { border: 2px solid {{ theme.css.primary_dark }}; font-weight: bold; }
+        .button { display: block; padding: 12px; margin-bottom: 10px; background: {{ theme.css.primary_dark }}; color: white; text-align: center; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: bold; }
+        .secondary { background: white; color: #0f172a; border: 1px solid #94a3b8; }
+        .instructions { margin-top: 20px; padding: 16px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.6; }
+        .instructions p { margin: 0 0 10px; }
+        .instructions p:last-child { margin-bottom: 0; }
+        .preview { flex: 1; min-width: 0; }
+        iframe { display: block; width: 100%; height: 80vh; min-height: 600px; border: 1px solid #94a3b8; background: white; }
+        .fallback { font-size: 12px; color: #475569; line-height: 1.5; }
+        @media (max-width: 680px) { body { padding: 16px; } main { flex-direction: column; } .controls, .preview { width: 100%; } iframe { height: 70vh; } }
+    </style>
+</head>
+<body>
+<main>
+    <aside class="controls">
+        <h1>Ficha OMR A5</h1>
+        <p class="subtitle">FISMA · 148 × 210 mm</p>
+        <a class="button" href="{{ url_for('download_sheet_pdf', curso=theme.id) }}">Descargar PDF A5</a>
+        <a class="button secondary" href="{{ url_for('download_sheet_pdf', curso=theme.id, inline=1) }}" target="_blank" rel="noopener">Abrir PDF para imprimir</a>
+        <a class="button secondary" href="/">Volver al panel</a>
+        <div class="instructions">
+            <p><strong>Impresión: papel A5, tamaño real / 100%.</strong> Desactive «ajustar a página» y cualquier reducción adicional.</p>
+            <p>La vista previa muestra el mismo PDF que se descarga.</p>
+            <p>Use lápiz 2B. Rellene una sola burbuja por pregunta, nivel y tipo; deje libres las cuatro guías de esquina y los dos apoyos laterales.</p>
+            <p style="font-size:11px;">© 2026 Alberto Brayan · Fisma OMR<br>Todos los derechos reservados.</p>
+        </div>
+    </aside>
+    <section class="preview" aria-label="Vista previa de la ficha A5">
+        <img src="/sheet_preview.png" alt="Ficha óptica FISMA A5" style="display:block;width:100%;height:auto;background:white;">
+        <p class="fallback">Si su navegador no muestra la ficha, use «Abrir PDF para imprimir» o descargue el PDF.</p>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "num_questions": 15,
+  "num_alternatives": 5,
+  "labels": {
+    "nombre": "Apellidos y Nombres",
+    "colegio": "Institución educativa",
+    "grado": "Nivel de examen",
+    "procedencia": "Procedencia"
+  },
+  "scoring": {
+    "buenas": 10,
+    "malas": -1,
+    "blanco": 0
+  },
+  "branding": {
+    "title": "FISMA - Evaluación de Física",
+    "logo": "static/branding/logo.png"
+  }
+}

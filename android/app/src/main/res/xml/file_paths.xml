@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path name="lotes" path="lotes/" />
+    <cache-path name="zips" path="zips/" />
+    <cache-path name="fichas" path="fichas/" />
+    <external-path name="downloads" path="Download/FismaOMR/" />
+</paths>

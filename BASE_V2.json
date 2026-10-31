@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/alber-brayan/omr-ocr-scan (v2.0)",
+  "edition": "V2 Pro anterior, identificada por el usuario como 1.4 Pro",
+  "omr_align_sha256": "1cba4acdabd7fea496bee5a4d17f01e21878532ec78e3bab320523bc65c14afe",
+  "note": "omr_align.py se conserva íntegro. La geometría de impresión/lectura se sustituye en sheet_pdf.py para la ficha FISMA A5. Los selectores nuevos usan los descriptores y el voto originales."
+}
