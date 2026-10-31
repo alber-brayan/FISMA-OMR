@@ -6,11 +6,18 @@ Calificación óptica de fichas A5 desde una web de escritorio, con una app Andr
 
 ## Manual
 
-- [Manual web en HTML](docs/index.html).
+- [Manual web en HTML, para leer en línea](https://alber-brayan.github.io/FISMA-OMR/).
+- [Archivo HTML para abrir localmente](docs/index.html).
 - [Manual web en PDF](docs/Manual_Fisma_OMR_Web.pdf): 11 páginas, índice y capturas con datos ficticios.
 - Desde la aplicación: enlace **Manual de uso web · HTML y PDF**, al pie del panel.
 
 El HTML funciona sin servicios externos y usa imágenes locales de `docs/assets`. Puede abrirse directamente desde el disco. Para publicarlo en un servidor estático se conserva la carpeta `docs` completa. La aplicación de calificación se ejecuta con Python en el equipo de trabajo.
+
+## Descargas de la versión publicada
+
+En [Fisma OMR A5.6](https://github.com/alber-brayan/FISMA-OMR/releases/tag/v2.0-fisma-a5.6) están el APK Android firmado, el manual PDF y el paquete HTML con sus imágenes para uso sin conexión.
+
+[Descargar APK Android 1.1.0](https://github.com/alber-brayan/FISMA-OMR/releases/download/v2.0-fisma-a5.6/Fisma-OMR-1.1.0.apk)
 
 ## Inicio en Windows
 
